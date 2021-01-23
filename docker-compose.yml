@@ -1,7 +1,7 @@
 version: "3.9"
-
+   
 services:
-  database:
+  db:
     image: postgres
     environment:
       - POSTGRES_DB=postgres
@@ -10,10 +10,9 @@ services:
   api:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
-    # command: bash -c "while true; do sleep 1; done"
     volumes:
       - .:/code
     ports:
       - "8000:8000"
     depends_on:
-      - database
+      - db
