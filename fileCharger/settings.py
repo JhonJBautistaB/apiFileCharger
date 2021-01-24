@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'fileCharger.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'chargerFile',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': 5432,
     }
 }
@@ -126,7 +126,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+import os
+
 STATIC_URL = '/static/'
+MEDIA_URL = './files/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',

@@ -2,5 +2,5 @@ from django.urls import path
 from fileCharger_api import views
 
 urlpatterns = [
-    path('apiFileCharger/', views.ApiFileChargerView.as_view()),    
+    path('FileCharger/<str:filename>', views.DatasetView.as_view()),    
 ]
