@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -129,11 +130,11 @@ USE_TZ = True
 import os
 
 STATIC_URL = '/static/'
-MEDIA_URL = './files/'
+MEDIA_URL = '/files/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 5
 }
