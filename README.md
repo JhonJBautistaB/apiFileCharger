@@ -3,11 +3,11 @@
 ![DjangoRestFramework](https://img.stackshare.io/service/1630/New_Project__67_.png "Django Rest Framework")
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-API REST que permite a los usuarios cargar un archivo desde su computador a la nube en cualquier formato en una Base de Datos PostgreSQL
+API REST que permite a los usuarios cargar un archivo CSV desde su computador a la nube, y leer cada una de las filas para hacer un control de versionamiento ante un cambio.
 
 **Metodos**
-  - POST : A traves del endpoint se recibe un archivo y se guarda 
-  - GET : Visualiza información que exiten en la base de datos
+  - POST : A traves del endpoint se recibe un archivo se guarda en servidor y se guardan filas en BD
+  - GET : Visualiza Los archivos y filas que han sido guardadas en la BD
 
 
 
